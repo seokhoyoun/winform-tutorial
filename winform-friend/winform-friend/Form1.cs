@@ -12,20 +12,29 @@ namespace winform_friend
 {
     public partial class Form1 : Form
     {
+        #region Field
+
+        private float posX = 0;
+        private float posY = 0;
+
+        private Graphics graphic;
+
+
+        #endregion
+
         public Form1()
         {
             InitializeComponent();
+
+            posX = drawingPanel.Width / 2;
+            posY = drawingPanel.Height / 2;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-      
-
-
-       
 
         private void UpdateLabel1(object sender, EventArgs e)
         {
@@ -55,6 +64,14 @@ namespace winform_friend
             }
         }
 
-        
+        private void ChangeCombobox1(object sender, EventArgs e)
+        {
+            MessageBox.Show(comboBox1.SelectedItem.ToString()); 
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX, posY - 5);
+        }
     }
 }
