@@ -173,6 +173,7 @@ namespace winform_friend
             this.btnRight.TabIndex = 10;
             this.btnRight.Text = "R";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // btnUp
             // 

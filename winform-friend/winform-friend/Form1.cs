@@ -72,6 +72,13 @@ namespace winform_friend
         private void btnUp_Click(object sender, EventArgs e)
         {
             graphic.DrawLine(new Pen(Color.Red), posX, posY, posX, posY - 5);
+            posY = posY - 5;
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX +  5, posY );
+            posX = posX - 5;
         }
     }
 }
