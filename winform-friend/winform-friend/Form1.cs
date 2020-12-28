@@ -29,6 +29,9 @@ namespace winform_friend
             posX = drawingPanel.Width / 2;
             posY = drawingPanel.Height / 2;
 
+            graphic = drawingPanel.CreateGraphics();
+            graphic.DrawRectangle(new Pen(Color.Red), 10, 10, 100, 200);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,13 +75,30 @@ namespace winform_friend
         private void btnUp_Click(object sender, EventArgs e)
         {
             graphic.DrawLine(new Pen(Color.Red), posX, posY, posX, posY - 5);
-            posY = posY - 5;
+            posY -= 5;
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX, posY + 5);
+            posY += 5;
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
-            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX +  5, posY );
-            posX = posX - 5;
+            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX + 5, posY );
+            posX += 5;
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            graphic.DrawLine(new Pen(Color.Red), posX, posY, posX - 5, posY);
+            posX -= 5;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            graphic.Clear(Color.White);
         }
     }
 }

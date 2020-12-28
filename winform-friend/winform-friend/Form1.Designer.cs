@@ -155,6 +155,7 @@ namespace winform_friend
             this.btnLeft.TabIndex = 2;
             this.btnLeft.Text = "L";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnDown
             // 
@@ -164,6 +165,7 @@ namespace winform_friend
             this.btnDown.TabIndex = 9;
             this.btnDown.Text = "DN";
             this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // btnRight
             // 
@@ -193,6 +195,7 @@ namespace winform_friend
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 
